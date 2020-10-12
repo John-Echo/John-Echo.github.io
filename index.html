@@ -154,6 +154,71 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Linux常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/29/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Linux常用命令</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/29/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
+  	<time datetime="2020-09-29T01:23:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Linux常用命令（持续更）"><a href="#Linux常用命令（持续更）" class="headerlink" title="Linux常用命令（持续更）"></a>Linux常用命令（持续更）</h1>
+        
+          <a class="article-more-a" href="/2020/09/29/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/29/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Linux-socket-多进程编程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -243,6 +308,36 @@
 <p><strong>非对称密码</strong>（双钥密码体制）：加密密钥≠解密密钥。</p>
 <p><strong>被动攻击</strong>：对保密通信系统采用截获密文进行分析的这类攻击。</p>
 <p><strong>主动攻击</strong>：非法侵入者、攻击者或黑客主动向系统窜扰，采用删除，增添，重放，伪造等手段向系统注入假消息。</p>
+<h3 id="1-1-密码体制的分类"><a href="#1-1-密码体制的分类" class="headerlink" title="1.1 密码体制的分类"></a>1.1 密码体制的分类</h3><p>加密钥与解密钥是否相等：</p>
+<ul>
+<li>传统密码（DES，AES，SMS4）：加密钥=解密钥</li>
+<li>公开密钥密码（RSA，ECC）：加密钥≠解密钥，且无法通过加密钥算出解密钥，可将加密钥公开</li>
+</ul>
+<p>从密钥的使用方式划分：</p>
+<ul>
+<li><strong>序列密码</strong>（RC4）：明文、密文、密钥以位（字符）为单位加解密；核心密码的主流</li>
+<li><strong>分组密码</strong>（DES，AES，SMS4）：明文、密文、密钥以分组为单位加解密；商用密码的主流</li>
+</ul>
+<h3 id="1-2-密码设计的基本方法"><a href="#1-2-密码设计的基本方法" class="headerlink" title="1.2 密码设计的基本方法"></a>1.2 密码设计的基本方法</h3><ol>
+<li>公开设计原则：密码的安全应仅依赖于对密钥的保密，不依赖于对算法的保密码的安全应仅依赖于对密钥的保密，不依赖于对算法的保密。</li>
+<li>扩散和混淆：<ul>
+<li><strong>扩散(diffusion)</strong>：将明文和密钥的每一位的影响散布到尽量多将明文和密钥的每一位的影响散布到尽量多的密文位中，理想情况下达到完备性。</li>
+<li><strong>混淆 (confusion)</strong>：使明文、密钥和密文之间的关系复杂化。 </li>
+</ul>
+</li>
+<li>迭代和乘积<ul>
+<li>迭代：设计一个轮函数，然后迭代。</li>
+<li>乘积：将几种密码联合应用。</li>
+</ul>
+</li>
+</ol>
+<h2 id="二、DES数据加密标准"><a href="#二、DES数据加密标准" class="headerlink" title="二、DES数据加密标准"></a>二、DES数据加密标准</h2><h3 id="2-1-密码整体特点"><a href="#2-1-密码整体特点" class="headerlink" title="2.1 密码整体特点"></a>2.1 密码整体特点</h3><ol>
+<li>分组密码：明文，密文和密钥（8为校验位）的分组长度都是64位。</li>
+<li>面向二进制数据的密码算法：能加解密任何形式的计算机数据。</li>
+<li>对合运算：<strong>加解密共用同一算法，使工程实现的工作量减半。</strong></li>
+<li>综合运用了置换、代替、代数等基本密码技术。</li>
+<li><strong>基本结构属于Feistel结构。</strong></li>
+</ol>
 
       
 
@@ -256,68 +351,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/09/21/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%8E%9F%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux基本操作与sm4算法应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/29/Linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%B8%8Esm4%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8/">Linux基本操作与sm4算法应用</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/29/Linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%B8%8Esm4%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-08-29T01:34:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/29/Linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%B8%8Esm4%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8/">展开全文 >></a>
         </p>
       
 

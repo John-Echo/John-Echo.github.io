@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Linux基本操作与sm4算法应用 | 张继宇的个人博客</title>
+  <title>Linux常用命令 | 张继宇的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="Linux基本操作与sm4算法应用">
-<meta property="og:url" content="http://yoursite.com/2020/08/29/Linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%B8%8Esm4%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8/index.html">
+  <meta name="description" content="Linux常用命令（持续更）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux常用命令">
+<meta property="og:url" content="http://yoursite.com/2020/09/29/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="张继宇的个人博客">
+<meta property="og:description" content="Linux常用命令（持续更）">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-08-29T01:34:14.000Z">
-<meta property="article:modified_time" content="2020-08-29T01:34:14.333Z">
+<meta property="article:published_time" content="2020-09-29T01:23:05.000Z">
+<meta property="article:modified_time" content="2020-10-12T13:06:17.203Z">
 <meta property="article:author" content="张继宇">
 <meta name="twitter:card" content="summary">
   
@@ -154,27 +156,273 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Linux基本操作与sm4算法应用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Linux常用命令" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Linux基本操作与sm4算法应用
+      Linux常用命令
     </h1>
   
 
         
-        <a href="/2020/08/29/Linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%B8%8Esm4%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-08-29T01:34:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
+        <a href="/2020/09/29/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
+  	<time datetime="2020-09-29T01:23:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="Linux常用命令（持续更）"><a href="#Linux常用命令（持续更）" class="headerlink" title="Linux常用命令（持续更）"></a>Linux常用命令（持续更）</h1><a id="more"></a>
+
+<h2 id="1、基本目录和文件类型"><a href="#1、基本目录和文件类型" class="headerlink" title="1、基本目录和文件类型"></a>1、基本目录和文件类型</h2><table>
+<thead>
+<tr>
+<th align="center">目录</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">bin</td>
+<td align="center">存放二进制可执行文件</td>
+</tr>
+<tr>
+<td align="center">boot</td>
+<td align="center">存放开机启动程序</td>
+</tr>
+<tr>
+<td align="center">dev</td>
+<td align="center">存放设备文件</td>
+</tr>
+<tr>
+<td align="center">home</td>
+<td align="center">存放用户</td>
+</tr>
+<tr>
+<td align="center">etc</td>
+<td align="center">用户信息和系统配置文件</td>
+</tr>
+<tr>
+<td align="center">lib</td>
+<td align="center">库文件</td>
+</tr>
+<tr>
+<td align="center">root</td>
+<td align="center">管理员宿主目录（家目录）</td>
+</tr>
+<tr>
+<td align="center">usr</td>
+<td align="center">用户资源管理目录</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">标识</th>
+<th align="center">文件类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-</td>
+<td align="center">普通文件</td>
+</tr>
+<tr>
+<td align="center">d</td>
+<td align="center">目录文件</td>
+</tr>
+<tr>
+<td align="center">c</td>
+<td align="center">字符设备文件</td>
+</tr>
+<tr>
+<td align="center">b</td>
+<td align="center">块设备文件</td>
+</tr>
+<tr>
+<td align="center">l</td>
+<td align="center">软连接</td>
+</tr>
+<tr>
+<td align="center">p</td>
+<td align="center">管道文件</td>
+</tr>
+<tr>
+<td align="center">s</td>
+<td align="center">套接字</td>
+</tr>
+</tbody></table>
+<h2 id="2、基础命令"><a href="#2、基础命令" class="headerlink" title="2、基础命令"></a>2、基础命令</h2><h3 id="2-1、快捷键"><a href="#2-1、快捷键" class="headerlink" title="2.1、快捷键"></a>2.1、快捷键</h3><table>
+<thead>
+<tr>
+<th align="center">快捷键</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Ctrl + a</td>
+<td align="center">移到命令行首</td>
+</tr>
+<tr>
+<td align="center">Ctrl + e</td>
+<td align="center">移到命令行尾</td>
+</tr>
+<tr>
+<td align="center">Ctrl + u</td>
+<td align="center">清空命令行</td>
+</tr>
+</tbody></table>
+<h3 id="2-2、查找与检索"><a href="#2-2、查找与检索" class="headerlink" title="2.2、查找与检索"></a>2.2、查找与检索</h3><p>find命令：找文件</p>
+<p>&emsp; -type 按文件类型搜索（文件用‘f’不能用‘-’）：find ./ -type f</p>
+<p>&emsp;-name 按文件名搜索（*通配符代表0-n字符，？代表1个字符）</p>
+<p>&emsp;-maxdepth 指定搜索深度（应作为第一个参数） ：find ./ -maxdepth 2 -name ‘*.jpg’</p>
+<p>&emsp;-size 按文件大小搜索(单位：k、M、G)：find ./ -size +20M -size -50M</p>
+<p>&emsp;-atime、mtime、ctime(stat 文件查看文件状态中的三个时间)</p>
+<p>&emsp;-exec：find后在结果集中执行命令（{}代表结果集，;转义字符表结束）：find ./  -name “*.c” -exec ls -l {} ;</p>
+<p>&emsp;-ok：find ./  -name “*.c” -ok rm -r {} ;（exec不会询问，ok会询问）</p>
+<p>&emsp;-xargs：find ./  -name “*.c” | xargs ls -l  与exec的区别是：当结果集数量过大时，可以分片映射</p>
+<p>&emsp;-print0：默认用空格进行拆分，所以文件名中有空格时会出错，可以find ./  -maxdepth 1 -type f -print0 | xargs -0 ls -l将分隔符改为null</p>
+<p>grep命令：找文件内容</p>
+<p>&emsp;&emsp;grep -r ‘copy’ ./ -n（-r指递归查找，-n指显示行号）</p>
+<p>&emsp;&emsp;ps -aux | grep 2222（结合进程表搜索指定进程）</p>
+<h3 id="2-3、压缩包管理"><a href="#2-3、压缩包管理" class="headerlink" title="2.3、压缩包管理"></a>2.3、压缩包管理</h3><p>压缩：</p>
+<ol>
+<li><p>tar压缩</p>
+<p>tar -zcvf    要生成的压缩包名   压缩材料 ：z：gzip c：create  v：显示压缩过程  f：file</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -zcvf  test.tar.gz    file1 dir2 ...     使用gzip方式压缩</span><br><span class="line"></span><br><span class="line">tar -jcvf  test.tar.gz    file1 dir2 ...     使用bzip2方式压缩</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>rar压缩</p>
+<p>​     rar a -r  要生成的压缩包名（建议带rar后缀）   压缩材料</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rar a -r  testrar.rar    file1  dir2 ...</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>zip压缩</p>
+<p>​     zip  -r  要生成的压缩包名   压缩材料</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip  -r  testzip.zip    file1  dir2 ...</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>解压：</p>
+<ol>
+<li><p>tar解压缩</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf  test.tar.gz     使用gzip方式解压缩</span><br><span class="line"></span><br><span class="line">tar -jxvf  test.tar.gz     使用bzip2方式解压缩</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>rar解压缩</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unrar  x  压缩包名（建议带rar后缀）</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>zip解压缩</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip  压缩包名</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="3、vim命令"><a href="#3、vim命令" class="headerlink" title="3、vim命令"></a>3、vim命令</h2><ol>
+<li><p>跳转到指定行：88G（命令模式）  :88（末行模式）</p>
+</li>
+<li><p>跳转文件首：gg（命令模式）</p>
+</li>
+<li><p>跳转文件尾：G（命令模式）</p>
+</li>
+<li><p>自动格式化程序：gg=G（命令模式）</p>
+</li>
+<li><p>大括号对应：%（命令模式）</p>
+</li>
+<li><p>光标移至行首：0（命令模式）执行结束，工作模式不变</p>
+</li>
+<li><p>光标移至行尾：$（命令模式）执行结束，工作模式不变</p>
+</li>
+<li><p>删除单个字符：x（命令模式）执行结束，工作模式不变</p>
+</li>
+<li><p>替换单个字符：r（命令模式），再按欲替换的字符</p>
+</li>
+<li><p>删除一个单词：dw（命令模式）光标置于单词的首字母进行操作</p>
+</li>
+<li><p>删除光标至行尾：D   d$（命令模式）</p>
+</li>
+<li><p>删除光标至行首：d0（命令模式）</p>
+</li>
+<li><p>删除指定区域：按v进入“可视”，挪移光标选中区域，按d删除</p>
+</li>
+<li><p>删除指定单行：dd（命令模式）光标所在行</p>
+</li>
+<li><p>删除指定N行：Ndd（命令模式）</p>
+</li>
+<li><p>复制一行：yy（命令模式）</p>
+</li>
+<li><p>粘贴：p（向后粘贴）  P（向前粘贴）</p>
+</li>
+<li><p>查找：找设想的内容：/输入欲搜索的内容，回车，n找到下一个</p>
+<p>&emsp;&emsp;&emsp;找看到的内容：光标置于单词上，*向后找，#向前找</p>
+</li>
+<li><p>单行替换：将光标置于待替换行上，进入末行模式，输入：s  /原数据/新数据</p>
+</li>
+<li><p>通篇替换：末行模式：%s  /原数据/新数据/g     不加/g，只替换每行首个</p>
+</li>
+<li><p>区域替换：末行模式：起始行号,终止行号s  /原数据/新数据/g     不加/g，只替换每行首个   例  :29,35s /printf/println/g</p>
+</li>
+<li><p>跳转至man手册：将光标置于待查看的函数上，使用K（命令模式）跳转。指定卷，nK</p>
+</li>
+<li><p>查看宏定义：[ d（命令模式）</p>
+</li>
+<li><p>在末行模式执行shell命令：！（命令模式）+语句</p>
+</li>
+</ol>
+<h2 id="4、gcc编译"><a href="#4、gcc编译" class="headerlink" title="4、gcc编译"></a>4、gcc编译</h2><p>gcc编译执行程序的4个步骤：预处理，编译，汇编，链接。</p>
+<ul>
+<li><p>预处理（生成.i文件    gcc -E）：展开宏定义与头文件，替换条件编译，删除注释，空白和空行；</p>
+</li>
+<li><p>编译（生成.s文件    gcc -S）：检查语法规范；<strong>消耗时间和地址资源最多</strong></p>
+</li>
+<li><p>汇编（生成.o文件    gcc -c）：将汇编指令翻译成机器指令；</p>
+</li>
+<li><p>链接（无参数）：<strong>数据段合并，地址回填</strong>。</p>
+</li>
+</ul>
+<p>参数：</p>
+<ol>
+<li>-I：指定头文件所在目录位置。</li>
+<li>-c：只做预处理、编译、汇编。<strong>得到二进制文件</strong></li>
+<li>-g：编译时添加调试语句。<strong>主要支持gdb调试</strong></li>
+<li>-Wall：显示所有警告信息。</li>
+<li>-D：向程序中<strong>动态</strong>注册宏定义。</li>
+</ol>
+<h2 id="5、静态库与动态库"><a href="#5、静态库与动态库" class="headerlink" title="5、静态库与动态库"></a>5、静态库与动态库</h2><p>静态库原理是将库中的函数，宏定义复制一份到程序中，故很占用空间，但库中的函数与程序中的函数并没有什么区别，调用速度较快；动态库又叫共享库，是当程序执行到库中函数处时再到库中进行动态调用，占用空间较小，调用速度相对较慢；</p>
+<h3 id="5-1、静态库制作及使用"><a href="#5-1、静态库制作及使用" class="headerlink" title="5.1、静态库制作及使用"></a>5.1、静态库制作及使用</h3><ol>
+<li><p>将.c文件生成.o文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -c add.c -o add.o</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用ar工具制作静态库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ar rcs lib库名.a add.o sub.o div.o</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编译静态库到可执行文件中</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc test.c lib库名.a -o a.out</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="5-2、动态库制作及使用"><a href="#5-2、动态库制作及使用" class="headerlink" title="5.2、动态库制作及使用"></a>5.2、动态库制作及使用</h3><ol>
+<li><p>将.c文件生成.o文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -c add.c -o add.o -fPIC</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用gcc -shared制作动态库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -shared -o lib库名.so add.o sub.o div.o</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编译可执行程序时，指定所使用的动态库（-l指定库名，-L指定库路径）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc test.c -o a.out -l库名 -L./lib</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行可执行程序./a.out==<strong>出错</strong>==（ldd a.out（列出动态库依赖关系）   -&gt;“not found”）</p>
+<p>原因：</p>
+<ul>
+<li>链接器：工作于链接阶段，工作时需要-l和-L。</li>
+<li>动态链接器：工作于程序运行阶段，工作时需要提供动态库所在目录位置。</li>
+</ul>
+<p>解决方法：</p>
+<ul>
+<li>通过环境变量：export LD_LIBRARY_PATH=库路径（临时生效，终端重启，环境变量失效）</li>
+<li>写入终端配置文件.bashrc</li>
+</ul>
+</li>
+</ol>
+
       
 
       
@@ -253,7 +501,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/29/Linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%B8%8Esm4%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/09/29/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -267,18 +515,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/09/21/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%8E%9F%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          密码学原理基础知识
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/08/25/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java网络编程</div>
+    <a href="/2020/09/26/Linux-socket-%E5%A4%9A%E8%BF%9B%E7%A8%8B%E7%BC%96%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux socket 多进程编程</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -305,7 +544,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux常用命令（持续更）"><span class="toc-number">1.</span> <span class="toc-text">Linux常用命令（持续更）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、基本目录和文件类型"><span class="toc-number">1.1.</span> <span class="toc-text">1、基本目录和文件类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、基础命令"><span class="toc-number">1.2.</span> <span class="toc-text">2、基础命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1、快捷键"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1、快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2、查找与检索"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2、查找与检索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3、压缩包管理"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3、压缩包管理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、vim命令"><span class="toc-number">1.3.</span> <span class="toc-text">3、vim命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、gcc编译"><span class="toc-number">1.4.</span> <span class="toc-text">4、gcc编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、静态库与动态库"><span class="toc-number">1.5.</span> <span class="toc-text">5、静态库与动态库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1、静态库制作及使用"><span class="toc-number">1.5.1.</span> <span class="toc-text">5.1、静态库制作及使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2、动态库制作及使用"><span class="toc-number">1.5.2.</span> <span class="toc-text">5.2、动态库制作及使用</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
